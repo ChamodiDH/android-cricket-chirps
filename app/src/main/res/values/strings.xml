@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Cricket Chirps</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Temperature Cricket</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="desc">Did you know you can determine the temperature outside by counting the number of chirps the crickets make? Just count the number of chirps one makes in 25 seconds and place that number in the box below:</string>
+    <string name="enter_the_chirps_count">Enter the chirps count</string>
+    <string name="calculate_temperature">Calculate Temperature</string>
+    <string name="textview">TextView</string>
+    <string name="the_approximate_temparature_outside_is">"The approximate temparature outside is "</string>
+    <string name="celcius">" Celcius."</string>
+</resources>
