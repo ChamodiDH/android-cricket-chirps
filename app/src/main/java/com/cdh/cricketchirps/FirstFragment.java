@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -46,13 +47,18 @@ public class FirstFragment extends Fragment {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int chirpsCount = Integer.parseInt(etChirpsCount.getText().toString().trim());
+                if(etChirpsCount.getText().toString().isEmpty()){
+                    Toast toast = Toast.makeText(getActivity(), "Please enter all fields!", Toast.LENGTH_SHORT);
+                    toast.show();
+                }else {
+                    int chirpsCount = Integer.parseInt(etChirpsCount.getText().toString().trim());
 
-                double temparature = (chirpsCount/3)+4;
+                    double temperature = Math.round((chirpsCount / 3.0 + 4.0) * 100.0) / 100.0;
 
-                String text = getString(R.string.the_approximate_temparature_outside_is)+temparature+ getString(R.string.celcius);
-                tvResult.setText(text);
-                tvResult.setVisibility(View.VISIBLE);
+                    String text = getString(R.string.the_approximate_temparature_outside_is) + temperature + getString(R.string.celcius);
+                    tvResult.setText(text);
+                    tvResult.setVisibility(View.VISIBLE);
+                }
             }
         });
 
